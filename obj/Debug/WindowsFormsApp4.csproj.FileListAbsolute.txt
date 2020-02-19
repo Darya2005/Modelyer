@@ -1,0 +1,23 @@
+C:\Users\Student\source\repos\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe.config
+C:\Users\Student\source\repos\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe
+C:\Users\Student\source\repos\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.pdb
+C:\Users\Student\source\repos\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Form1.resources
+C:\Users\Student\source\repos\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+C:\Users\Student\source\repos\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe
+C:\Users\Student\source\repos\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.pdb
+E:\проекты\Расчет длины ткани\bin\Debug\WindowsFormsApp4.exe.config
+E:\проекты\Расчет длины ткани\bin\Debug\WindowsFormsApp4.exe
+E:\проекты\Расчет длины ткани\bin\Debug\WindowsFormsApp4.pdb
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.csprojAssemblyReference.cache
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.exe
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.pdb
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.MainForm.resources
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.Bryki.resources
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.Shablony.resources
+E:\проекты\Расчет длины ткани\obj\Debug\WindowsFormsApp4.Yubki.resources
