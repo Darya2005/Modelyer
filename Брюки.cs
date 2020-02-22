@@ -36,33 +36,40 @@ namespace WindowsFormsApp4
             Text = category;
 
 
+
             odezda[0] = new Odezda("Готическая", "Юбки", "1");
-            odezda[1] = new Odezda("Юбки", "Юбки", "2");
-            odezda[2] = new Odezda("Jielur", "Юбки", "3");
-            odezda[3] = new Odezda("Юбки2", "Юбки", "");
-            odezda[4] = new Odezda("bruki", "Брюки", "");
-            odezda[5] = new Odezda("брюки", "Брюки", "");
-            odezda[6] = new Odezda("VONDA", "Брюки", "");
-            odezda[7] = new Odezda("брюки2", "Брюки", "");
+            odezda[1] = new Odezda("Юбки", "Юбки", "3");
+            odezda[2] = new Odezda("Jielur", "Юбки", "2");
+            odezda[3] = new Odezda("Юбки2", "Юбки", "4");
+            odezda[4] = new Odezda("bruki", "Брюки", "2");
+            odezda[5] = new Odezda("брюки", "Брюки", "1");
+            odezda[6] = new Odezda("VONDA", "Брюки", "1");
+            odezda[7] = new Odezda("брюки2", "Брюки", "1");
+            odezda[8] = new Odezda("Платье1", "Платья", "1");
+            odezda[9] = new Odezda("Платье2", "Платья", "");
+            odezda[10] = new Odezda("Платье3", "Платья", "");
 
             int x = 10;
-            int y = 200;
-            for (int i = 0; i < 8; i++)
+            int y = 100;
+            for (int i = 0; i < 11; i++)
             {
                 odezda[i].pb.Location = new Point(x, y);
-                odezda[i].pb.Size = new Size(200, 200);
+                odezda[i].pb.Text = odezda[i].category + odezda[i].formula;
+                odezda[i].pb.Size = new Size(100, 100);
                 odezda[i].pb.SizeMode = PictureBoxSizeMode.Zoom;
                 odezda[i].pb.Click += new EventHandler(PictureBox1_Click);
                 odezda[i].pb.Load("../../Pictures/" + odezda[i].category + "/" + odezda[i].name + ".jpg");
                 Controls.Add(odezda[i].pb);
-                x = x + 200;
+                x = x + 100;
 
-                if (x > Width - 200)
+                if (x > Width - 100)
                 {
                     x = 10;
-                    y = y + 220;
+                    y = y + 120;
                 }
             }
+
+            comboBox1.Text = category;
 
             /*if (Text == "Брюки")
             {
@@ -110,56 +117,13 @@ namespace WindowsFormsApp4
             Close();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("У тебя денег нет!");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            MainForm form3 = new MainForm(pictureBox2, Text);
-            form3.Show();
-        }
-
-
-        private void PictureBox4_Click(object sender, EventArgs e)
-        {
-            MainForm form3 = new MainForm(pictureBox4, Text);
-            form3.Show();
-        }
-
-        private void PictureBox3_Click_1(object sender, EventArgs e)
-        {
-            MainForm form3 = new MainForm(pictureBox3, Text);
-            form3.Show();
-        }
-
-        private void Bryki_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        /// <summary>
+        /// Поиск
+        /// </summary>
+        private void poisk(object sender, EventArgs e)
         {
             int x = 10;
-            int y = 200;
+            int y = 100;
             for (int i = 0; i < 8; i++)
             {
                 odezda[i].pb.Visible = true;
@@ -174,15 +138,32 @@ namespace WindowsFormsApp4
                 if (odezda[i].pb.Visible)
                 {
                     odezda[i].pb.Location = new Point(x, y);
-                    x = x + 200;
+                    x = x + 100;
 
-                    if (x > Width - 200)
+                    if (x > Width - 100)
                     {
                         x = 10;
-                        y = y + 220;
+                        y = y + 120;
                     }
                 }
             }
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            button2.Text = "1";
+
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.Text = "2";
+
+        }
+
+        private void Bryki_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

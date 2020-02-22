@@ -49,9 +49,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.OGTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OTTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DITextBox)).BeginInit();
@@ -81,7 +78,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(541, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
             // 
             // OGTextBox
             // 
@@ -96,6 +92,7 @@
             0,
             0,
             0});
+            this.OGTextBox.ValueChanged += new System.EventHandler(this.resultButton_Click);
             // 
             // OTTextBox
             // 
@@ -110,6 +107,7 @@
             0,
             0,
             0});
+            this.OTTextBox.ValueChanged += new System.EventHandler(this.resultButton_Click);
             // 
             // DITextBox
             // 
@@ -124,6 +122,7 @@
             this.DITextBox.Size = new System.Drawing.Size(62, 22);
             this.DITextBox.TabIndex = 6;
             this.DITextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DITextBox.ValueChanged += new System.EventHandler(this.resultButton_Click);
             // 
             // label1
             // 
@@ -160,7 +159,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Обхват Талии";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label4
             // 
@@ -182,6 +180,7 @@
             this.DRTextBox.Size = new System.Drawing.Size(62, 22);
             this.DRTextBox.TabIndex = 11;
             this.DRTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DRTextBox.ValueChanged += new System.EventHandler(this.resultButton_Click);
             // 
             // label5
             // 
@@ -224,7 +223,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(252, 208);
             this.tableLayoutPanel1.TabIndex = 16;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
             // 
             // OBTextBox
             // 
@@ -245,6 +243,7 @@
             0,
             0,
             0});
+            this.OBTextBox.ValueChanged += new System.EventHandler(this.resultButton_Click);
             // 
             // label9
             // 
@@ -259,7 +258,7 @@
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(338, 30);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 47);
+            this.button2.Size = new System.Drawing.Size(200, 41);
             this.button2.TabIndex = 17;
             this.button2.Text = "Шаблоны";
             this.button2.UseVisualStyleBackColor = true;
@@ -286,63 +285,37 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 370);
+            this.textBox1.Location = new System.Drawing.Point(106, 367);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 32);
             this.textBox1.TabIndex = 20;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(17, 370);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 24);
+            this.label6.Size = new System.Drawing.Size(83, 24);
             this.label6.TabIndex = 21;
-            this.label6.Text = "F1";
+            this.label6.Text = "Нужно:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 408);
+            this.label7.Location = new System.Drawing.Point(212, 370);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 24);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "F1";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(112, 408);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 32);
-            this.textBox2.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 446);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 24);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "F1";
-            this.label8.Click += new System.EventHandler(this.Label8_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(113, 446);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 32);
-            this.textBox3.TabIndex = 24;
-            this.textBox3.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.label7.Size = new System.Drawing.Size(43, 24);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "см.";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 491);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(606, 415);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label12);
@@ -393,9 +366,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
