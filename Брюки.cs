@@ -80,13 +80,6 @@ namespace WindowsFormsApp4
                 pictureBox4.Load("../../Pictures/Брюки/брюки2.jpg");
             }
 
-            if (Text == "Юбки")
-            {
-                pictureBox1.Load("../../Pictures/Юбки/Готическая.jpg");
-                pictureBox2.Load("../../Pictures/Юбки/Юбки.jpg");
-                pictureBox3.Load("../../Pictures/Юбки/Jielur.jpg");
-                pictureBox4.Load("../../Pictures/Юбки/Юбки2.jpg");
-            }
 
             if (Text == "Платья")
             {
