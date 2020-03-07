@@ -35,7 +35,7 @@
             this.OTTextBox = new System.Windows.Forms.NumericUpDown();
             this.DITextBox = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.OGlabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DRTextBox = new System.Windows.Forms.NumericUpDown();
@@ -43,12 +43,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.OBTextBox = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OGTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OTTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DITextBox)).BeginInit();
@@ -136,17 +136,17 @@
             this.label1.Text = "Обхват Бёдер:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // OGlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(7, 41);
-            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 41);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Охват Груди:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.OGlabel.AutoSize = true;
+            this.OGlabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OGlabel.Location = new System.Drawing.Point(7, 41);
+            this.OGlabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.OGlabel.Name = "OGlabel";
+            this.OGlabel.Size = new System.Drawing.Size(162, 41);
+            this.OGlabel.TabIndex = 8;
+            this.OGlabel.Text = "Охват Груди:";
+            this.OGlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -207,7 +207,7 @@
             this.tableLayoutPanel1.Controls.Add(this.OTTextBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.OGlabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.OGTextBox, 1, 1);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 30);
@@ -252,17 +252,6 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 24);
             this.label9.TabIndex = 9;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(338, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 41);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Шаблоны";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -310,17 +299,27 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "см.";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(338, 364);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(202, 29);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 415);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.resultButton);
@@ -352,7 +351,7 @@
         private System.Windows.Forms.NumericUpDown OTTextBox;
         private System.Windows.Forms.NumericUpDown DITextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label OGlabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown DRTextBox;
@@ -360,12 +359,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.NumericUpDown OBTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
 

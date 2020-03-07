@@ -15,19 +15,38 @@ namespace WindowsFormsApp4
         //public static Image SelectedImage;
         string formula;
 
-        public MainForm(PictureBox pb, string category)
-        {
-            InitializeComponent();
-            pictureBox1.Image = pb.Image;
-            Text = Text + " " + pb.Tag + " " + pb.Text;
-            formula = pb.Text;
-            resultButton_Click(null, null);
-        }
-
         /// <summary>
         /// Количество ткани
         /// </summary>
         int kolich = 0;
+
+        /// <summary>
+        /// Обхват бедер
+        /// </summary>
+        int OB;
+        /// <summary>
+        /// Обхват груди
+        /// </summary>
+        int OG;
+        int DI;
+        int DR;
+        int OT;
+
+        public MainForm(Odezda od)
+        {
+            InitializeComponent();
+            pictureBox1.Image = od.pb.Image;
+            Text = Text + " " + od.name;
+            formula = od.category + od.formula;
+            resultButton_Click(null, null);
+
+            if (od.category == "Юбки")
+            {
+                OGlabel.Visible = false;
+                OGTextBox.Visible = false;
+            }
+        }
+
 
         
         /// <summary>
@@ -35,20 +54,12 @@ namespace WindowsFormsApp4
         /// </summary>
         void raschetYubki()
         {
-            int OB = Convert.ToInt32(OBTextBox.Value);
-            int OG = Convert.ToInt32(OGTextBox.Value);
-            int DI = Convert.ToInt32(DITextBox.Value);
-            int DR = Convert.ToInt32(DRTextBox.Value);
-            int OT = Convert.ToInt32(OTTextBox.Value);
-
-
             if (OB < 104)
                 kolich = kolich + DI + 30;
             else if (OB < 116)
                 kolich = kolich + 2 * DI + 30;
             else
                 kolich = kolich + 3 * DI + 30;
-
         }
 
         /// <summary>
@@ -56,13 +67,6 @@ namespace WindowsFormsApp4
         /// </summary>
         void raschetYubki2()
         {
-            int OB = Convert.ToInt32(OBTextBox.Value);
-            int OG = Convert.ToInt32(OGTextBox.Value);
-            int DI = Convert.ToInt32(DITextBox.Value);
-            int DR = Convert.ToInt32(DRTextBox.Value);
-            int OT = Convert.ToInt32(OTTextBox.Value);
-
-
             if (OB < 104)
                 kolich = kolich + DI + 30;
             else if (OB < 116)
@@ -76,13 +80,6 @@ namespace WindowsFormsApp4
         /// </summary>
         void raschetYubki3()
         {
-            int OB = Convert.ToInt32(OBTextBox.Value);
-            int OG = Convert.ToInt32(OGTextBox.Value);
-            int DI = Convert.ToInt32(DITextBox.Value);
-            int DR = Convert.ToInt32(DRTextBox.Value);
-            int OT = Convert.ToInt32(OTTextBox.Value);
-
-
             if (OB < 104)
                 kolich = kolich + 2 * DI + 50;
             else if (OB < 116)
@@ -96,13 +93,6 @@ namespace WindowsFormsApp4
         /// </summary>
         void raschetBruk()
         {
-            int OB = Convert.ToInt32(OBTextBox.Value);
-            int OG = Convert.ToInt32(OGTextBox.Value);
-            int DI = Convert.ToInt32(DITextBox.Value);
-            int DR = Convert.ToInt32(DRTextBox.Value);
-            int OT = Convert.ToInt32(OTTextBox.Value);
-
-
             if (OB < 104)
                 kolich = kolich + DI + 30;
             else if (OB < 116)
@@ -116,39 +106,56 @@ namespace WindowsFormsApp4
         /// </summary>
         void raschetBruk2()
         {
-            int OB = Convert.ToInt32(OBTextBox.Value);
-            int OG = Convert.ToInt32(OGTextBox.Value);
-            int DI = Convert.ToInt32(DITextBox.Value);
-            int DR = Convert.ToInt32(DRTextBox.Value);
-            int OT = Convert.ToInt32(OTTextBox.Value);
-
-
             if (OB < 104)
                 kolich = kolich + DI + 50;
             else if (OB < 116)
                 kolich = kolich + 3 * DI / 2 + 30;
             else
                 kolich = kolich + 2 * DI + 30;
-
         }
+
         /// <summary>
         /// платье Летучая мышь
         /// </summary>
         void raschetPlatya()
         {
-            int OB = Convert.ToInt32(OBTextBox.Value);
-            int OG = Convert.ToInt32(OGTextBox.Value);
-            int DI = Convert.ToInt32(DITextBox.Value);
-            int DR = Convert.ToInt32(DRTextBox.Value);
-            int OT = Convert.ToInt32(OTTextBox.Value);
-
-
             if (OB < 104)
                 kolich = kolich + 3 * DI / 2 + 30; 
             else if (OB < 116)
                 kolich = kolich + 2 * DI + 30;
             else
                 kolich = kolich + 2 * DI + 30;
+        }
+
+        void raschetPlatya2()
+        {
+            if (OB < 104)
+                kolich = kolich + 2 * DI + 30;
+            else if (OB < 116)
+                kolich = kolich + 2 * DI + 100;
+            else
+                kolich = kolich + 2 * DI + 150;
+        }
+
+        void raschetPlatya3()
+        {
+            if (OB < 104)
+                kolich = kolich +  DI + DR +30;
+            else if (OB < 116)
+                kolich = kolich + DI + DR + 30;
+            else
+                kolich = kolich + 2 * DI + DR + 30;
+
+        }
+
+        void raschetPidgaka1()
+        {
+            if (OB < 104)
+                kolich = kolich + DI + DR + 70;
+            else if (OB < 116)
+                kolich = kolich + 2 * DI + DR;
+            else
+                kolich = kolich + 2 * DI + DR + 30;
 
         }
 
@@ -156,45 +163,37 @@ namespace WindowsFormsApp4
 
         private void resultButton_Click(object sender, EventArgs e)
         {
-            if (formula == "Юбки1")
+            OB = Convert.ToInt32(OBTextBox.Value);
+            OG = Convert.ToInt32(OGTextBox.Value);
+            DI = Convert.ToInt32(DITextBox.Value);
+            DR = Convert.ToInt32(DRTextBox.Value);
+            OT = Convert.ToInt32(OTTextBox.Value);
+
+            kolich = 0;
+
+            if (DI <= 0)
             {
-                kolich = 0;
-                raschetYubki();
-            }
-            else if (formula == "Юбки2")
-            {
-                kolich = 0;
-                raschetYubki2();
-            }
-            else if (formula == "Юбки3")
-            { 
-                kolich = 0;
-                raschetYubki3();
-            }
-            else if (formula == "Юбки4")
-            {
-                kolich = 150;
-            }
-            else if (formula == "Брюки1")
-            {
-                kolich = 0;
-                raschetBruk();
-            }
-            else if (formula == "Брюки2")
-            {
-                kolich = 0;
-                raschetBruk();
+                MessageBox.Show("Укажите длину изделия!");
+                
+                 return;
             }
 
+            if      (formula == "Юбки1")                raschetYubki();
+            else if (formula == "Юбки2")                raschetYubki2();
+            else if (formula == "Юбки3")                raschetYubki3();
+            else if (formula == "Юбки4")                kolich = 150;
+            else if (formula == "Брюки1")               raschetBruk();
+            else if (formula == "Брюки2")               raschetBruk2();
+            else if (formula == "Платья1")              raschetPlatya();
+            else if (formula == "Платья2")              raschetPlatya2();
+            else if (formula == "Платья3")              raschetPlatya3();
+            else if (formula == "Пиджаки1")              raschetPidgaka1();
 
             textBox1.Text = kolich.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Shablony form3 = new Shablony();
-            form3.Show();
-          //  pictureBox1.Image = MainForm.SelectedImage;
            
         }
 
@@ -219,6 +218,11 @@ namespace WindowsFormsApp4
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

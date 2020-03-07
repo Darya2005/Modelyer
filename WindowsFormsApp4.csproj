@@ -53,12 +53,6 @@
     <Compile Include="Брюки.Designer.cs">
       <DependentUpon>Брюки.cs</DependentUpon>
     </Compile>
-    <Compile Include="Шаблоны.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Шаблоны.Designer.cs">
-      <DependentUpon>Шаблоны.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +75,6 @@
     </Compile>
     <EmbeddedResource Include="Брюки.resx">
       <DependentUpon>Брюки.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Шаблоны.resx">
-      <DependentUpon>Шаблоны.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -75,8 +75,6 @@
             this.button2.Text = "Фильтр";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.poisk);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // Bryki
             // 
