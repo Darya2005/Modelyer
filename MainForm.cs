@@ -32,8 +32,16 @@ namespace WindowsFormsApp4
         int DR;
         int OT;
 
-        public MainForm(Odezda od)
+        Odezda od;
+
+        private void PBizb_Click(object sender, EventArgs e)
         {
+            Избранное.izbrannoe.Add(od);
+        }
+
+        public MainForm(Odezda od1)
+        {
+            od = od1;
             InitializeComponent();
             pictureBox1.Image = od.pb.Image;
             Text = Text + " " + od.name;
@@ -225,6 +233,12 @@ namespace WindowsFormsApp4
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Izb_Click_1(object sender, EventArgs e)
+        {
+            Избранное избранное = new Избранное();
+            избранное.Show();
         }
     }
 }

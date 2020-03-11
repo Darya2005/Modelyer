@@ -43,18 +43,21 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.OBTextBox = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Izb = new System.Windows.Forms.Button();
+            this.PBizb = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.OGTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OTTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DITextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DRTextBox)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OBTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBizb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -253,16 +256,6 @@
             this.label9.Size = new System.Drawing.Size(0, 24);
             this.label9.TabIndex = 9;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 211);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -309,11 +302,45 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Izb
+            // 
+            this.Izb.Location = new System.Drawing.Point(338, 324);
+            this.Izb.Name = "Izb";
+            this.Izb.Size = new System.Drawing.Size(200, 34);
+            this.Izb.TabIndex = 25;
+            this.Izb.Text = "Избранное";
+            this.Izb.UseVisualStyleBackColor = true;
+            this.Izb.Click += new System.EventHandler(this.Izb_Click_1);
+            // 
+            // PBizb
+            // 
+            this.PBizb.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.Избранное;
+            this.PBizb.Image = global::WindowsFormsApp4.Properties.Resources.Избранное;
+            this.PBizb.Location = new System.Drawing.Point(418, 36);
+            this.PBizb.Name = "PBizb";
+            this.PBizb.Size = new System.Drawing.Size(40, 41);
+            this.PBizb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBizb.TabIndex = 24;
+            this.PBizb.TabStop = false;
+            this.PBizb.Click += new System.EventHandler(this.PBizb_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(338, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(203, 211);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 415);
+            this.Controls.Add(this.Izb);
+            this.Controls.Add(this.PBizb);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -338,6 +365,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OBTextBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBizb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -365,6 +393,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox PBizb;
+        private System.Windows.Forms.Button Izb;
     }
 }
 

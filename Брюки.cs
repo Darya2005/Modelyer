@@ -34,7 +34,7 @@ namespace WindowsFormsApp4
 
     public partial class Bryki : Form
     {
-        Odezda[] odezda = new Odezda[13];
+        public static Odezda[] odezda = new Odezda[13];
 
         public Bryki(string category)
         {
@@ -93,12 +93,11 @@ namespace WindowsFormsApp4
             comboBox1.Text = category;
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        public static void PictureBox1_Click(object sender, EventArgs e)
         {
-
             for (int i = 0; i < 11; i++)
             {
-                if (sender == odezda[i].pb)
+                if (((PictureBox)sender).Image == odezda[i].pb.Image)
                 {
                     MainForm form3 = new MainForm(odezda[i]);
                     form3.Show();
