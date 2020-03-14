@@ -181,7 +181,7 @@ namespace WindowsFormsApp4
 
             if (DI <= 0)
             {
-                MessageBox.Show("Укажите длину изделия!");
+                //MessageBox.Show("Укажите длину изделия!");
                 
                  return;
             }

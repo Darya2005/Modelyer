@@ -51,6 +51,8 @@
             this.Izb = new System.Windows.Forms.Button();
             this.PBizb = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.materialComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.OGTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OTTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DITextBox)).BeginInit();
@@ -84,7 +86,7 @@
             // 
             // OGTextBox
             // 
-            this.OGTextBox.Location = new System.Drawing.Point(183, 47);
+            this.OGTextBox.Location = new System.Drawing.Point(183, 45);
             this.OGTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.OGTextBox.Name = "OGTextBox";
             this.OGTextBox.Size = new System.Drawing.Size(62, 22);
@@ -99,7 +101,7 @@
             // 
             // OTTextBox
             // 
-            this.OTTextBox.Location = new System.Drawing.Point(183, 88);
+            this.OTTextBox.Location = new System.Drawing.Point(183, 84);
             this.OTTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.OTTextBox.Name = "OTTextBox";
             this.OTTextBox.Size = new System.Drawing.Size(62, 22);
@@ -114,7 +116,7 @@
             // 
             // DITextBox
             // 
-            this.DITextBox.Location = new System.Drawing.Point(183, 129);
+            this.DITextBox.Location = new System.Drawing.Point(183, 123);
             this.DITextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.DITextBox.Maximum = new decimal(new int[] {
             2000,
@@ -134,7 +136,7 @@
             this.label1.Location = new System.Drawing.Point(7, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 41);
+            this.label1.Size = new System.Drawing.Size(162, 39);
             this.label1.TabIndex = 7;
             this.label1.Text = "Обхват Бёдер:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,10 +145,10 @@
             // 
             this.OGlabel.AutoSize = true;
             this.OGlabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OGlabel.Location = new System.Drawing.Point(7, 41);
+            this.OGlabel.Location = new System.Drawing.Point(7, 39);
             this.OGlabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.OGlabel.Name = "OGlabel";
-            this.OGlabel.Size = new System.Drawing.Size(162, 41);
+            this.OGlabel.Size = new System.Drawing.Size(162, 39);
             this.OGlabel.TabIndex = 8;
             this.OGlabel.Text = "Охват Груди:";
             this.OGlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,10 +157,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(7, 82);
+            this.label3.Location = new System.Drawing.Point(7, 78);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 41);
+            this.label3.Size = new System.Drawing.Size(162, 39);
             this.label3.TabIndex = 9;
             this.label3.Text = "Обхват Талии";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,17 +169,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(7, 123);
+            this.label4.Location = new System.Drawing.Point(7, 117);
             this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 41);
+            this.label4.Size = new System.Drawing.Size(162, 39);
             this.label4.TabIndex = 10;
             this.label4.Text = "Длина Изделия:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DRTextBox
             // 
-            this.DRTextBox.Location = new System.Drawing.Point(183, 170);
+            this.DRTextBox.Location = new System.Drawing.Point(183, 162);
             this.DRTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.DRTextBox.Name = "DRTextBox";
             this.DRTextBox.Size = new System.Drawing.Size(62, 22);
@@ -189,10 +191,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(7, 164);
+            this.label5.Location = new System.Drawing.Point(7, 156);
             this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 44);
+            this.label5.Size = new System.Drawing.Size(162, 39);
             this.label5.TabIndex = 14;
             this.label5.Text = "Длина Рукава:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,6 +204,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.84925F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.15075F));
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.OBTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.DITextBox, 1, 3);
@@ -212,19 +215,19 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.OGlabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.OGTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.materialComboBox, 1, 5);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 30);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(252, 208);
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(252, 237);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // OBTextBox
@@ -258,7 +261,6 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(370, 80);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(151, 24);
@@ -334,6 +336,33 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(7, 195);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 42);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Длина Рукава:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialComboBox
+            // 
+            this.materialComboBox.FormattingEnabled = true;
+            this.materialComboBox.Items.AddRange(new object[] {
+            "Ткань",
+            "Шерсть",
+            "Трикотаж",
+            "Проволока",
+            "Стретч-пленка",
+            "Кольчуга"});
+            this.materialComboBox.Location = new System.Drawing.Point(179, 198);
+            this.materialComboBox.Name = "materialComboBox";
+            this.materialComboBox.Size = new System.Drawing.Size(70, 22);
+            this.materialComboBox.TabIndex = 20;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
@@ -395,6 +424,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox PBizb;
         private System.Windows.Forms.Button Izb;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox materialComboBox;
     }
 }
 
