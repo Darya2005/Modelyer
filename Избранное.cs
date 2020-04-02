@@ -56,22 +56,22 @@ namespace WindowsFormsApp4
                 cb.Location = new Point(x + 250, y + 70);
                 cb.Size = new Size(150, 30);
                 cb.Font = new Font("Arial", 14);
-                cb.Items.AddRange(new object[] {
-                    "Ткань",
-                    "Шерсть",
-                    "Трикотаж",
-                    "Проволока",
-                    "Стретч-пленка",
-                    "Кольчуга"});
+                cb.Items.Clear();
+                foreach (string variant in od.Tseny.Keys)
+                {
+                    cb.Items.Add(variant);
+                }
                 cb.Text = od.material;
-
+                cb.Tag = od.name;
+              //  cb.SelectedIndexChanged += new EventHandler (comboBox1_SelectedIndexChanged )
 
                 //Цена в 3 столбце
                 Label lb4 = new Label();
                 lb4.Location = new Point(x + 450, y + 70);
                 lb4.Font = new Font("Arial", 12);
                 lb4.Size = new Size(100, 30);
-                lb4.Text = "Цена ~" + od.Tsena;
+                lb4.Text = "Цена ~ 1500";// + od.Tsena;
+               
 
                 Label lb5 = new Label();
                 lb5.Location = new Point(x + 450, y + 40);
@@ -95,6 +95,17 @@ namespace WindowsFormsApp4
         private void Избранное_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          /*  for (int i = 0; i < izbrannoe.Count; i++)
+            {
+                if (((ComboBox)sender).Location.Y == i * 111 + 60)
+                {
+                    izbrannoe[i].lb4.Text = "2";
+                }
+            }*/
         }
     }
 }
