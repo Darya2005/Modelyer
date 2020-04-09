@@ -279,5 +279,11 @@ namespace WindowsFormsApp4
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+             Обновление Обновить = new Обновление();
+            Обновить.Show();
+        }
     }
 }

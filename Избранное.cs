@@ -63,7 +63,7 @@ namespace WindowsFormsApp4
                 }
                 cb.Text = od.material;
                 cb.Tag = od.name;
-              //  cb.SelectedIndexChanged += new EventHandler (comboBox1_SelectedIndexChanged )
+                cb.SelectedIndexChanged += new EventHandler(comboBox1_SelectedIndexChanged);
 
                 //Цена в 3 столбце
                 Label lb4 = new Label();
@@ -92,20 +92,36 @@ namespace WindowsFormsApp4
             }
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = 0;
+            {
+                ComboBox cb = (ComboBox)sender;
+                foreach (Odezda usl in Избранное.izbrannoe)
+                {
+                    if (cb.Location == new Point(30 + 250, + 130 + 111 * i))
+                    {
+                        foreach (Control ctrl in Controls)
+                        {
+                            if (ctrl is Label &&
+                                 ctrl.Location == new Point(30 + 450, +130 + 111 * i))
+                            {
+                                ctrl.Text = "Цена ¬" + usl.Tseny[cb.Text].ToString();
+                            }
+                        }
+
+                    }
+
+                  i = i + 1; 
+                } 
+            } 
+        }
+
         private void Избранное_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          /*  for (int i = 0; i < izbrannoe.Count; i++)
-            {
-                if (((ComboBox)sender).Location.Y == i * 111 + 60)
-                {
-                    izbrannoe[i].lb4.Text = "2";
-                }
-            }*/
-        }
+       
     }
 }
