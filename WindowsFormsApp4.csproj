@@ -68,6 +68,12 @@
     <Compile Include="Избранное.Designer.cs">
       <DependentUpon>Избранное.cs</DependentUpon>
     </Compile>
+    <Compile Include="Обновление.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Обновление.Designer.cs">
+      <DependentUpon>Обновление.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Избранное.resx">
       <DependentUpon>Избранное.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Обновление.resx">
+      <DependentUpon>Обновление.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

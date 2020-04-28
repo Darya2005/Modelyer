@@ -240,5 +240,42 @@ namespace WindowsFormsApp4
             Избранное избранное = new Избранное();
             избранное.Show();
         }
-    }
+
+      
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+          
+        }
+
+        int ShowPromo = 0;
+
+        private void показатьПромокодToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowPromo = Environment.TickCount;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(Environment.TickCount - ShowPromo < 10000)
+            label10.Visible = true;
+            else
+                label10.Visible = false;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            label8.Text = DateTime.Now.ToLongTimeString();
+        }
+    } 
 }

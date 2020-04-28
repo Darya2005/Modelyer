@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.MateriaTB = new System.Windows.Forms.TextBox();
+            this.NomberTB = new System.Windows.Forms.TextBox();
+            this.MinSizeTB = new System.Windows.Forms.TextBox();
+            this.MaxSizeTB = new System.Windows.Forms.TextBox();
+            this.Variant1TB = new System.Windows.Forms.TextBox();
+            this.Price1TB = new System.Windows.Forms.TextBox();
+            this.Variant2TB = new System.Windows.Forms.TextBox();
+            this.Price2TB = new System.Windows.Forms.TextBox();
+            this.Variant3TB = new System.Windows.Forms.TextBox();
+            this.Price3TB = new System.Windows.Forms.TextBox();
+            this.TimeTB = new System.Windows.Forms.TextBox();
             this.NameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,82 +65,82 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox2
+            // MateriaTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 22;
+            this.MateriaTB.Location = new System.Drawing.Point(173, 115);
+            this.MateriaTB.Name = "MateriaTB";
+            this.MateriaTB.Size = new System.Drawing.Size(100, 22);
+            this.MateriaTB.TabIndex = 22;
             // 
-            // textBox3
+            // NomberTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(173, 87);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 23;
+            this.NomberTB.Location = new System.Drawing.Point(173, 87);
+            this.NomberTB.Name = "NomberTB";
+            this.NomberTB.Size = new System.Drawing.Size(100, 22);
+            this.NomberTB.TabIndex = 23;
             // 
-            // textBox4
+            // MinSizeTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(173, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 24;
+            this.MinSizeTB.Location = new System.Drawing.Point(173, 143);
+            this.MinSizeTB.Name = "MinSizeTB";
+            this.MinSizeTB.Size = new System.Drawing.Size(100, 22);
+            this.MinSizeTB.TabIndex = 24;
             // 
-            // textBox5
+            // MaxSizeTB
             // 
-            this.textBox5.Location = new System.Drawing.Point(173, 171);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 25;
+            this.MaxSizeTB.Location = new System.Drawing.Point(173, 171);
+            this.MaxSizeTB.Name = "MaxSizeTB";
+            this.MaxSizeTB.Size = new System.Drawing.Size(100, 22);
+            this.MaxSizeTB.TabIndex = 25;
             // 
-            // textBox6
+            // Variant1TB
             // 
-            this.textBox6.Location = new System.Drawing.Point(173, 199);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 26;
+            this.Variant1TB.Location = new System.Drawing.Point(173, 199);
+            this.Variant1TB.Name = "Variant1TB";
+            this.Variant1TB.Size = new System.Drawing.Size(100, 22);
+            this.Variant1TB.TabIndex = 26;
             // 
-            // textBox7
+            // Price1TB
             // 
-            this.textBox7.Location = new System.Drawing.Point(173, 227);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 27;
+            this.Price1TB.Location = new System.Drawing.Point(173, 227);
+            this.Price1TB.Name = "Price1TB";
+            this.Price1TB.Size = new System.Drawing.Size(100, 22);
+            this.Price1TB.TabIndex = 27;
             // 
-            // textBox8
+            // Variant2TB
             // 
-            this.textBox8.Location = new System.Drawing.Point(173, 255);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 28;
+            this.Variant2TB.Location = new System.Drawing.Point(173, 255);
+            this.Variant2TB.Name = "Variant2TB";
+            this.Variant2TB.Size = new System.Drawing.Size(100, 22);
+            this.Variant2TB.TabIndex = 28;
             // 
-            // textBox9
+            // Price2TB
             // 
-            this.textBox9.Location = new System.Drawing.Point(173, 283);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 29;
+            this.Price2TB.Location = new System.Drawing.Point(173, 283);
+            this.Price2TB.Name = "Price2TB";
+            this.Price2TB.Size = new System.Drawing.Size(100, 22);
+            this.Price2TB.TabIndex = 29;
             // 
-            // textBox10
+            // Variant3TB
             // 
-            this.textBox10.Location = new System.Drawing.Point(173, 311);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 30;
+            this.Variant3TB.Location = new System.Drawing.Point(173, 311);
+            this.Variant3TB.Name = "Variant3TB";
+            this.Variant3TB.Size = new System.Drawing.Size(100, 22);
+            this.Variant3TB.TabIndex = 30;
             // 
-            // textBox11
+            // Price3TB
             // 
-            this.textBox11.Location = new System.Drawing.Point(173, 339);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 31;
+            this.Price3TB.Location = new System.Drawing.Point(173, 339);
+            this.Price3TB.Name = "Price3TB";
+            this.Price3TB.Size = new System.Drawing.Size(100, 22);
+            this.Price3TB.TabIndex = 31;
             // 
-            // textBox12
+            // TimeTB
             // 
-            this.textBox12.Location = new System.Drawing.Point(173, 367);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 32;
+            this.TimeTB.Location = new System.Drawing.Point(173, 367);
+            this.TimeTB.Name = "TimeTB";
+            this.TimeTB.Size = new System.Drawing.Size(100, 22);
+            this.TimeTB.TabIndex = 32;
             // 
             // NameTB
             // 
@@ -256,17 +256,17 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NameTB);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TimeTB);
+            this.Controls.Add(this.Price3TB);
+            this.Controls.Add(this.Variant3TB);
+            this.Controls.Add(this.Price2TB);
+            this.Controls.Add(this.Variant2TB);
+            this.Controls.Add(this.Price1TB);
+            this.Controls.Add(this.Variant1TB);
+            this.Controls.Add(this.MaxSizeTB);
+            this.Controls.Add(this.MinSizeTB);
+            this.Controls.Add(this.NomberTB);
+            this.Controls.Add(this.MateriaTB);
             this.Controls.Add(this.button2);
             this.Name = "Обновление";
             this.Text = "Обновление";
@@ -280,17 +280,17 @@
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox MateriaTB;
+        private System.Windows.Forms.TextBox NomberTB;
+        private System.Windows.Forms.TextBox MinSizeTB;
+        private System.Windows.Forms.TextBox MaxSizeTB;
+        private System.Windows.Forms.TextBox Variant1TB;
+        private System.Windows.Forms.TextBox Price1TB;
+        private System.Windows.Forms.TextBox Variant2TB;
+        private System.Windows.Forms.TextBox Price2TB;
+        private System.Windows.Forms.TextBox Variant3TB;
+        private System.Windows.Forms.TextBox Price3TB;
+        private System.Windows.Forms.TextBox TimeTB;
         private System.Windows.Forms.TextBox NameTB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

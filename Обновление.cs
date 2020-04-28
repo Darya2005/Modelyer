@@ -74,9 +74,33 @@ namespace WindowsFormsApp4
          string FileName;
         private void button3_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            FileName = openFileDialog1.FileName;
-            pictureBox1.Load(FileName);
+             int i = 0;
+            string variants = "";
+
+            if (NameTB.Text != "" && Int32.TryParse(CategoryCB.Text, out i))
+                variants += ", " + NameTB.Text + ", " + CategoryCB.Text;
+            if (NomberTB.Text != "" && Int32.TryParse(MateriaTB.Text, out i))
+                variants += ", " + NomberTB.Text + ", " + MateriaTB.Text;
+            if (MinSizeTB.Text != "" && Int32.TryParse(MaxSizeTB.Text, out i))
+                variants += ", " + MinSizeTB.Text + ", " + MaxSizeTB.Text;
+            if (Variant1TB.Text != "" && Int32.TryParse(Price1TB.Text, out i))
+                variants += ", " + Variant1TB.Text + ", " + Price1TB.Text;
+            if (Variant2TB.Text != "" && Int32.TryParse(Price2TB.Text, out i))
+                variants += ", " + Variant2TB.Text + ", " + Price2TB.Text;
+            if (Variant3TB.Text != "" && Int32.TryParse(Price3TB.Text, out i))
+                variants += ", " + Variant3TB.Text + ", " + Price3TB.Text;
+
+
+
+
+            if (variants.Length > 0)
+                variants = variants.Substring(2, variants.Length - 4);
+
+            System.IO.File.AppendAllText("Одежда.txt",
+                Environment.NewLine +
+                NameTB.Text + ";" + CategoryCB.Text + ";2;ткань;12;80;" + variants + ";" + TimeTB.Text);
+
+
 
         }
     }

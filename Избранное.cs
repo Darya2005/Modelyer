@@ -6,7 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
+using System.Net;
+using System.Net.Mail;
+
+
 
 namespace WindowsFormsApp4
 {
@@ -71,7 +75,7 @@ namespace WindowsFormsApp4
                 lb4.Font = new Font("Arial", 12);
                 lb4.Size = new Size(100, 30);
                 lb4.Text = "Цена ~ 1500";// + od.Tsena;
-               
+
 
                 Label lb5 = new Label();
                 lb5.Location = new Point(x + 450, y + 40);
@@ -99,7 +103,7 @@ namespace WindowsFormsApp4
                 ComboBox cb = (ComboBox)sender;
                 foreach (Odezda usl in Избранное.izbrannoe)
                 {
-                    if (cb.Location == new Point(30 + 250, + 130 + 111 * i))
+                    if (cb.Location == new Point(30 + 250, +130 + 111 * i))
                     {
                         foreach (Control ctrl in Controls)
                         {
@@ -112,9 +116,9 @@ namespace WindowsFormsApp4
 
                     }
 
-                  i = i + 1; 
-                } 
-            } 
+                    i = i + 1;
+                }
+            }
         }
 
         private void Избранное_Load(object sender, EventArgs e)
@@ -122,6 +126,48 @@ namespace WindowsFormsApp4
 
         }
 
-       
+
+
+        private void ZakazB_Click(object sender, EventArgs e)
+
+        {
+
+            MailAddress fromMailAddress = new MailAddress("ilchencodarya@gmail.com", "Заказчик");
+            MailAddress toAddress = new MailAddress("ilchencodarya@gmail.com");
+
+            using (MailMessage mailMessage = new MailMessage(fromMailAddress, toAddress))
+            using (SmtpClient smtpClient = new SmtpClient())
+
+            {
+
+                mailMessage.Subject = "Здравствуйте!";
+                mailMessage.Body = "Вот мой заказ";
+                mailMessage.Attachments.Add(new Attachment("Заказ.txt"));
+
+                smtpClient.Host = "smtp.gmail.com";
+                smtpClient.Port = 587;
+                smtpClient.EnableSsl = true;
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, " Тут пароль ");
+
+
+
+
+
+                smtpClient.Send(mailMessage);
+
+
+            }
+        }
     }
 }
+
+
+    
+
+
+
+
+
+
+
