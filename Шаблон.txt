@@ -1,0 +1,16 @@
+<p>&nbsp;</p>
+<h3 style="text-align: center; color: #3f7320;"><span style="border-bottom: 4px solid #c82828;">Новый заказ!</span> 😁</h3>
+<!-- Этот комментарий виден только в редакторе исходного кода -->
+<p><strong>&nbsp;Наименование товара:</strong></p>
+<p></p>
+<p><strong>&nbsp;Размер:<strong></strong></strong></p>
+<p><strong></strong></p>
+<p><strong>&nbsp;Количество:</strong></p>
+<p><strong></strong></p>
+<p><strong>&nbsp;Имя и контакты заказчика:</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p></p>
+<p></p>
+<p></p>
+<p>&nbsp; &nbsp; &nbsp;</p>

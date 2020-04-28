@@ -140,15 +140,27 @@ namespace WindowsFormsApp4
 
             {
 
-                mailMessage.Subject = "Здравствуйте!";
-                mailMessage.Body = "Вот мой заказ";
-                mailMessage.Attachments.Add(new Attachment("Заказ.txt"));
+                mailMessage.Subject = "Новый заказ!";
 
+                mailMessage.IsBodyHtml = true;
+                mailMessage.Body = System.IO.File.ReadAllText("Шаблон.txt");
+
+                    System.IO.File.WriteAllText("Заказ.csv",
+                        "Новый заказ!,," +
+                 Environment.NewLine + "Список:");
+                 foreach (Odezda od in Избранное.izbrannoe)
+                 {
+                    System.IO.File.AppendAllText("Заказ.csv",
+                     Environment.NewLine +
+                   od.name + ";" + od.category );
+                   
+                 }
+                mailMessage.Attachments.Add(new Attachment("Заказ.csv"));
                 smtpClient.Host = "smtp.gmail.com";
                 smtpClient.Port = 587;
                 smtpClient.EnableSsl = true;
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, " Тут пароль ");
+                smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "Здесь должен быть пароль от эл.почты");
 
 
 
