@@ -160,7 +160,7 @@ namespace WindowsFormsApp4
                 smtpClient.Port = 587;
                 smtpClient.EnableSsl = true;
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "Здесь должен быть пароль от эл.почты");
+                smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "Mine_kitten2005");
 
 
 
